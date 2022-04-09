@@ -26,12 +26,11 @@ const Queue = require('./queue');
 
 function weave(sourceOne, sourceTwo) {
   const combined = new Queue();
-  
-  while(sourceOne.peek() || sourceOne.peek()) {
-    if(  sourceOne.peek()) {
+  while (sourceOne.peek() || sourceOne.peek()) {
+    if (sourceOne.peek()) {
       combined.add(sourceOne.remove());
     }
-    if(sourceTwo.peek()) {
+    if (sourceTwo.peek()) {
       combined.add(sourceTwo.remove())
     }
   }
